@@ -40,15 +40,17 @@
 		<td><img src="{{asset('/img/'.$data->foto_profil)}}" height="50px"></td>
 		<td> {{ $data->title_header }} </td>
 		<td> {{ $data->title_1 }} </td>
-		<td> {!! substr($data->deskripsi_1,0,100) !!}... </td>
+		<td> {{ $data->deskripsi_1 }} </td>
 		<td> {{ $data->title_2 }} </td>
 		@php 
 			$desk_2 = preg_replace('/<[^>]+>/i', '', $data->deskripsi_2); 
 		@endphp
 		<td> {{ str_limit($desk_2, 100, '...') }} </td>
 		<td> {{ $data->linkvideo }} </td>
-		<td> {!!$data->footer !!} </td>
-		
+		@php 
+			$desk_2 = preg_replace('/<[^>]+>/i', '', $data->footer); 
+		@endphp
+		<td> {{ str_limit($desk_2, 100, '...') }} </td>
 		
 	<td>
 		<a class="btn btn-primary" href=" {{ route('content.edit',$data->id)}} "><i class="fa fa-edit"></i>Edit </a>

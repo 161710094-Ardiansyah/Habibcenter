@@ -179,6 +179,9 @@ return [
         Laratrust\LaratrustServiceProvider::class,
         SahusoftCom\YoutubeApi\LiveStreamApiServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+        Unisharp\Ckeditor\ServiceProvider::class,
+        UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
     ],
 
     /*
@@ -229,6 +232,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Laratrust'   => Laratrust\LaratrustFacade::class,
             'Alert' => UxWeb\SweetAlert\SweetAlert::class,
+            'Image' => Intervention\Image\Facades\Image::class,
     ],
 
 ];

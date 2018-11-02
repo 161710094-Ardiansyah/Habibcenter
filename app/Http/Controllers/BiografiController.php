@@ -104,7 +104,7 @@ class BiografiController extends Controller
  $this->validate($request,[
             
             
-            'nama' => 'required||unique:biografis',
+            'nama' => 'required',
             'deskripsi' => 'required',
         ]);
         $biografi = Biografi::findOrFail($id);

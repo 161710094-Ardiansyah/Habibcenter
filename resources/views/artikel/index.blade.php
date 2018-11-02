@@ -37,7 +37,7 @@
 		@php 
 			$desk_2 = preg_replace('/<[^>]+>/i', '', $data->deskripsi); 
 		@endphp
-		<td> {{ str_limit($desk_2, 100, '...') }} </td>
+		<td> {{ str_limit($desk_2, 100, '...') }} </td>		
 		<td> {{ $data->kategori->nama }} </td>
 		<td>
 			<ul>
@@ -66,6 +66,7 @@
 </tbody>
 </table>
 </div>
+<center>{{$artikel->links('vendor.pagination.bootstrap-4')}}</center>
 </div>
 </div>
 </div>

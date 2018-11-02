@@ -29,7 +29,7 @@
 			  		</div>
 			  		<div class="form-group {{ $errors->has('deskripsi') ? ' has-error' : '' }}">
 			  			<label class="control-label">Deskripsi</label>	
-			  			<textarea id="text" type="ckeditor" name="deskripsi" class="ckeditor" required=""></textarea>
+			  			<textarea id="my-editor" type="ckeditor" name="deskripsi" class="ckeditor" required=""></textarea>
 			  			@if ($errors->has('deskripsi'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('deskripsi') }}</strong>

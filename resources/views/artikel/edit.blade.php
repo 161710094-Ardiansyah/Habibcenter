@@ -36,7 +36,7 @@
 			  		</div>
 			  		<div class="form-group {{ $errors->has('deskripsi') ? ' has-error' : '' }}">
 			  			<label class="control-label">Deskripsi</label>	
-			  			<textarea id="text" type="ckeditor" name="deskripsi" class="ckeditor"   required="">{{$artikel->deskripsi}}</textarea>
+			  			<textarea id="my-editor" type="ckeditor" name="deskripsi" class="ckeditor"   required="">{{$artikel->deskripsi}}</textarea>
 			  			@if ($errors->has('deskripsi'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('deskripsi') }}</strong>
@@ -84,11 +84,15 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 
-		let tag = <?php echo $artikel->tag ?>;
+		var tag = <?php echo $artikel->tag ?>;
 
-	    $('#select2').select2();
-	    $("#select2").val(tag);
-	    $('#select2').select2('val', tag);
+		$('#select2').select2();
+		$('#select2').val(tag).trigger('change');
+		$.each(tag,function(i,id){
+			$('#select2 option[value="'+id+'"]').prop('selected', true);
+		});
+
+
 	});
 </script>
 @endpush

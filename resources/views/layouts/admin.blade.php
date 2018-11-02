@@ -120,7 +120,16 @@
 
 <script src="{{asset('assets/js/select2.min.js')}}"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ <script>
+      CKEDITOR.replace('my-editor',{
+    filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+    filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+    filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+    filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+  });
 
+    </script>
+  
 @stack('scripts')
 
 </body>

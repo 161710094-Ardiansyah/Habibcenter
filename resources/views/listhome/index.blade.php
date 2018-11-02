@@ -32,7 +32,6 @@
 		@endphp
 		<td> {{ str_limit($desk_2, 100, '...') }} </td>
 		
-		
 	<td>
 		<a class="btn btn-primary" href=" {{ route('listhome.edit',$data->id)}} "><i class="fa fa-edit"></i>Edit </a>
 	</td>

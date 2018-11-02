@@ -8,3 +8,4 @@
   </script>
   <script type='text/javascript' src="{{asset('assets/themes/rindu/dist/js/fbq.main.min-ver=1.0.10.js')}}"></script>
   <script type='text/javascript' src="{{asset('assets/js/wp-embed.min-ver=3e5c66eacbe2db2bcd43415df215f2b3.js')}}"></script>
+   

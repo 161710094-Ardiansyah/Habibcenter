@@ -21,7 +21,7 @@ class ArtikelController extends Controller
     
     public function index()
     {
-        $artikel = Artikel::with('Kategori')->get();
+        $artikel = Artikel::orderBy('created_at','desc')->paginate(5);
         return view('artikel.index',compact('artikel'));
     }
     
@@ -113,7 +113,7 @@ class ArtikelController extends Controller
         Alert::success('Data Successfully Changed', 'Good Job!')->autoclose('1700');
         $this->validate($request,[
             
-            'judul' => 'required|unique:artikels',
+            'judul' => 'required',
             'deskripsi' => 'required',
             'kategori_id' => 'required',
 

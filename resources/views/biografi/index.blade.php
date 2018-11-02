@@ -35,8 +35,7 @@
 		@php 
 			$desk_2 = preg_replace('/<[^>]+>/i', '', $data->deskripsi); 
 		@endphp
-		<td> {{ str_limit($desk_2, 100, '...') }} </td>
-		
+		<td> {{ str_limit($desk_2, 500, '...') }} </td>
 		
 	<td>
 		<a class="btn btn-primary" href=" {{ route('biografi.edit',$data->id)}} "><i class="fa fa-edit"></i>Edit </a>
